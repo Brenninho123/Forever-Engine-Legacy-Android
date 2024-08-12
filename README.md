@@ -1,74 +1,110 @@
-# [Forever Engine](https://github.com/Yoshubs/FunkinForever)
-An open-source, quality of life and performance driven [Friday Night Funkin'](https://www.newgrounds.com/portal/view/770371) mod engine!
-----------------------------------------------
+# Friday Night Funkin' - Psych Engine Mobile
+Engine originally used on [Mind Games Mod](https://gamebanana.com/mods/301107), intended to be a fix for the vanilla version's many issues while keeping the casual play aspect of it. Also aiming to be an easier alternative to newbie coders.
 
-![image](https://media.discordapp.net/attachments/916918345255751690/930068118938730526/legacy.png)
+## Installation:
+You must have [the most up-to-date version of Haxe](https://haxe.org/download/), seriously, stop using 4.1.5, it misses some stuff.
 
-----------------------------------------------
-The Friday Night Funkin' Forever Engine is an engine solely based on source code at the moment. Forever Engine is currently in legacy state as it is being rewritten. The legacy version of Forever Engine lacks accessibility and cohesion, something we are currently working to fix with the more newer and updated rewrite. Thank you for your patience.
+Follow a Friday Night Funkin' source code compilation tutorial, after this you will need to install LuaJIT.
 
-**FOREVER ENGINE IS ONLY MEANT TO BE USED ON DESKTOP! I AM NOT RESPONSIBLE FOR CRASHES/PROBLEMS WITH HTML5, NOR AM I RESPONSIBLE FOR MAINTAINING HTML5**
+To install LuaJIT do this: `haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit` on a Command prompt/PowerShell
 
-----------------------------------------------
-Forever Engine FEATURES! - 
-Noteskins,
-Custom UIs,
-Options Menu with FPS Capping and adjustments
-A lot of modularity and freedom with options (hopefully in the future EVERYTHING will be toggleable)
-A restructure and partial remake of the base game's source code
-Source Code folder abstraction
-More streamlined code (only having to set things in one place)
-AND MORE!
+...Or if you don't want your mod to be able to run .lua scripts, delete the "LUA_ALLOWED" line on Project.xml
 
-I really wanted to make an FNF engine that was easier to work with than any other, mostly because I thought about how messy most other engines including the base game were. That doesn't mean Forever Engine is better than the base game however, Forever is only a tribute to Friday Night Funkin' and its modding community, a small project of mine that I hope people can find enjoyment and use out of!
 
-----------------------------------------------
+If you get an error about StatePointer when using Lua, run `haxelib remove linc_luajit` into Command Prompt/PowerShell, then re-install linc_luajit.
 
-ADDITIONS IN 0.3
+If you want video support on your mod, simply do `haxelib install hxCodec` on a Command prompt/PowerShell
 
-- Rewritten Hold notes 
-- BPM Changes (credit to NebulaZorua)
-- Rewritten Inputs (Thanks ShadowMario for letting me borrow some of your scripts, it was more of an afterthought tbh)
-- Better camera movement (heavily based on Vs. Sonic.exe)
-- Just general stability and changes to make sure Legacy is at the very least not broken before moving on to 1.0
+otherwise, you can delete the "VIDEOS_ALLOWED" Line on Project.xml
 
-----------------------------------------------
-CREDITS:
-----------------------------------------------
+## Mobile Credits:
+* Lily - Head Porter
 
-[Yoshubs](https://github.com/Yoshubs) - made the engine. she just so happens to be very fucking stupid for accidentally pushing the martian mixtape source code into forever engine's base github page
+### Mobile Special Thanks
+* Mihai Alexandru - Author of mobile controls and also his new storage stuff and FlxRuntimeShader is used here
 
-[Pixloen](https://github.com/PixlJacket) - made a lot of the custom assets that forever engine uses, he also gave me a lot of general advice on how to improve the engine as well as his input on both how to improve upon the base game and how the input system felt and such. ALSO PROGRAMMED SIMPLY JUDGEMENTS AND BACKGROUND DARKEN, He basically co-owns the engine lmao
+## Credits:
+* Shadow Mario - Programmer
+* RiverOaken - Artist
+* Yoshubs - Assistant Programmer
 
-[Gedehari](https://github.com/gedehari) - BANGER ASS PROGRAMMER, made the freeplay loading thread to avoid lag issues in freeplay, waveform render code (which will be used soon), freaking EXTERNAL SHADER SUPPORT for modcharts when they're a thing and so many other things like the crashlogger. I urge you to check out his project, [Izzy Engine](https://github.com/gedehari/IzzyEngine), which he let me borrow a lot of aspects from which I still owe him for lmao. AWESOME dude I can't stress this enough
+### Special Thanks
+* bbpanzu - Ex-Programmer
+* shubs - New Input System
+* SqirraRNG - Crash Handler and Base code for Chart Editor's Waveform
+* KadeDev - Fixed some cool stuff on Chart Editor and other PRs
+* iFlicky - Composer of Psync and Tea Time, also made the Dialogue Sounds
+* PolybiusProxy - .MP4 Video Loader Library (hxCodec)
+* Keoiki - Note Splash Animations
+* Smokey - Sprite Atlas Support
+* Nebula the Zorua - LUA JIT Fork and some Lua reworks
+_____________________________________
 
-[ImCodist](https://github.com/ImCodist) - helped with a couple of pull requests and issue fixes, ALSO MADE THE WHOLE ASS FREAKING DIALOGUE SYSTEM, but, I'm not gonna give him any credit at all, because he stole my obsidian soul in minecraft and I will never forgive him for that!!!!
+# Features
 
-[Scarlett](https://github.com/SomeKitten) - Overall cool friend of mine who knows a lot about programming and math that has helped me out countless times, still going here helping me with pushes, commits, etc. She wrote the finalised math formula for the note quants and fixed the song name issue.
+## Attractive animated dialogue boxes:
 
-[Oneilr](https://oneilr.newgrounds.com/) - Cool Guy Oneilr, made some of the custom assets, mostly the animated ones like the custom note splashes to avoid the week 7 embargo as well as some other things like the checkmarks in the options menu.
+![](https://user-images.githubusercontent.com/44785097/127706669-71cd5cdb-5c2a-4ecc-871b-98a276ae8070.gif)
 
-[HelloSammu](https://github.com/hellosammu) - weird catgirl programmer, they scare me
-CREDITED MAINTENANCE AND SOME MISC FIXES, also scaleable text for dialogue functions
 
-[ninjamuffin99](https://ninjamuffin99.newgrounds.com/) - HE MADE THE BASE GAME SO LIKE WITHOUT HIM THIS WOULD NOT BE POSSIBLE GO CHECK HIM OUT RIGHT NOW
+## Mod Support
+* Probably one of the main points of this engine, you can code in .lua files outside of the source code, making your own weeks without even messing with the source!
+* Comes with a Mod Organizing/Disabling Menu.
 
-rest of the rise n' skate team - that mod is the reason im even making an engine right now so like I kind of owe you guys this whole engine and more for that honestly and I will actually do more so stay tuned
 
-----------------------------------------------
-SHOUTOUTS
-----------------------------------------------
-[HThagomizer](https://github.com/HThagomizer) - not MURDERING ME for accidentally pushing the martian mixtape source code
+## Atleast one change to every week:
+### Week 1:
+  * New Dad Left sing sprite
+  * Unused stage lights are now used
+### Week 2:
+  * Both BF and Skid & Pump does "Hey!" animations
+  * Thunders does a quick light flash and zooms the camera in slightly
+  * Added a quick transition/cutscene to Monster
+### Week 3:
+  * BF does "Hey!" during Philly Nice
+  * Blammed has a cool new colors flash during that sick part of the song
+### Week 4:
+  * Better hair physics for Mom/Boyfriend (Maybe even slightly better than Week 7's :eyes:)
+  * Henchmen die during all songs. Yeah :(
+### Week 5:
+  * Bottom Boppers and GF does "Hey!" animations during Cocoa and Eggnog
+  * On Winter Horrorland, GF bops her head slower in some parts of the song.
+### Week 6:
+  * On Thorns, the HUD is hidden during the cutscene
+  * Also there's the Background girls being spooky during the "Hey!" parts of the Instrumental
 
-[Tsuraran](https://twitter.com/_Tsuraran) - DOPE ASS CUSTOM MENU MUSIC INCOMING, also made vs skipper with clockwerk which is fucking hilarious ALSO YEAH I'LL BUMP AS WELL AFTER ITS IN THE ENGINE (YES IM WORKING ON IT TOO LMAO)
+## Cool new Chart Editor changes and countless bug fixes
+![](https://github.com/ShadowMario/FNF-PsychEngine/blob/main/docs/img/chart.png?raw=true)
+* You can now chart "Event" notes, which are bookmarks that trigger specific actions that usually were hardcoded on the vanilla version of the game.
+* Your song's BPM can now have decimal values
+* You can manually adjust a Note's strum time if you're really going for milisecond precision
+* You can change a note's type on the Editor, it comes with two example types:
+  * Alt Animation: Forces an alt animation to play, useful for songs like Ugh/Stress
+  * Hey: Forces a "Hey" animation instead of the base Sing animation, if Boyfriend hits this note, Girlfriend will do a "Hey!" too.
 
-[Clockwerk](https://twitter.com/ClockwerkSmurf) - also made vs skipper, oh my god what were you guys thinking
-----------------------------------------------
-How to Compile:
+## Multiple editors to assist you in making your own Mod
+![Screenshot_3](https://user-images.githubusercontent.com/44785097/144629914-1fe55999-2f18-4cc1-bc70-afe616d74ae5.png)
+* Working both for Source code modding and Downloaded builds!
 
-Basically, all of the files you need are in the engine itself through the setup.bat (Huge thanks to [FNF Source Code Guide](https://gamebanana.com/tuts/13798) for the download to the file) except for Visual Studio Code, or whatever program you choose to use to program in the engine. If you've already worked with fnf, this should work perfectly with you and if it doesn't then you might have the wrong target settings, or Lime is probably broken, that's usually what happens with these things, it's happened to me a ton of times lmao. I'm not a very good programmer.
-If you want some external sources that will better walk you through how to compile the game, look no further than the [base game github](https://github.com/ninjamuffin99/Funkin) and [FNF Source Code Guide](https://gamebanana.com/tuts/13798), I really hope they help you out!
+## Story mode menu rework:
+![](https://i.imgur.com/UB2EKpV.png)
+* Added a different BG to every song (less Tutorial)
+* All menu characters are now in individual spritesheets, makes modding it easier.
 
-----------------------------------------------
-Thank you for checking out my engine! Got any questions? DM me at Shubs#0404 on Discord!
-----------------------------------------------
+## Credits menu
+![Screenshot_1](https://user-images.githubusercontent.com/44785097/144632635-f263fb22-b879-4d6b-96d6-865e9562b907.png)
+* You can add a head icon, name, description and a Redirect link for when the player presses Enter while the item is currently selected.
+
+## Awards/Achievements
+* The engine comes with 16 example achievements that you can mess with and learn how it works (Check Achievements.hx and search for "checkForAchievement" on PlayState.hx)
+
+## Options menu:
+* You can change Note colors, Delay and Combo Offset, Controls and Preferences there.
+ * On Preferences you can toggle Downscroll, Middlescroll, Anti-Aliasing, Framerate, Low Quality, Note Splashes, Flashing Lights, etc.
+
+## Other gameplay features:
+* When the enemy hits a note, their strum note also glows.
+* Lag doesn't impact the camera movement and player icon scaling anymore.
+* Some stuff based on Week 7's changes has been put in (Background colors on Freeplay, Note splashes)
+* You can reset your Score on Freeplay/Story Mode by pressing Reset button.
+* You can listen to a song or adjust Scroll Speed/Damage taken/etc. on Freeplay by pressing Space.
